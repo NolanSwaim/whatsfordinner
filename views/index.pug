@@ -1,5 +1,34 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  include mixins/restaurantCard
+  div.container
+    each restaurant in restaurants
+      +restaurantCard(restaurant)
+    div.card
+      div.card-header
+        div.backdrop
+        div.card-title=restaurant.name
+        img.card-header-image(src=restaurant.image)
+      div.card-body
+        div.edit
+          a(href='#') Edit
+        div.card-details
+          div.category=restaurant.category
+          div.rating
+            -for(let i = 0; i<restaurant.rating; i++)
+              span $#X2b50
+        div.description=restaurant.description
+
+          | ebsfhjbjesbfjkcbsehjf cbsfhjbjesbfjkcbsehjf c
+          | ebsfhjbjesbfjkcbsehjf cbsfhjbjesbfjkcbsehjf c
+          | ebsfhjbjesbfjkcbsehjf cbsfhjbjesbfjkcbsehjf c
+          | ebsfhjbjesbfjkcbsehjf cbsfhjbjesbfjkcbsehjf c
+          | ebsfhjbjesbfjkcbsehjf cbsfhjbjesbfjkcbsehjf c
+          | ebsfhjbjesbfjkcbsehjf cbsfhjbjesbfjkcbsehjf c
+          | ebsfhjbjesbfjkcbsehjf cbsfhjbjesbfjkcbsehjf c
+          | ebsfhjbjesbfjkcbsehjf cbsfhjbjesbfjkcbsehjf c
+
+
+
+
