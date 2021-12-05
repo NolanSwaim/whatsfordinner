@@ -1,5 +1,5 @@
 const {Restaurant} = require('../models')
-const categories = ['Italian','Fast Food'];
+const categories = ['Italian','Fast Food','Chinese','Mexican','Indian','Japanese'];
 
 module.exports.viewAll = async function (req, res) {
     let searchCategories =['All'];
